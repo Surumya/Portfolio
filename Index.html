@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surumya Sharma | Associate Product Manager Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .badge {
+            @apply px-3 py-1 rounded-full text-xs font-medium;
+        }
+
+        .badge-blue { @apply bg-blue-100 text-blue-700; }
+        .badge-purple { @apply bg-purple-100 text-purple-700; }
+        .badge-slate { @apply bg-slate-100 text-slate-700; }
+
+        section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight gradient-text">SURUMYA SHARMA</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Case Studies</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+            </div>
+            <a href="mailto:sharmasurumya@gmail.com" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                Contact Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full border border-blue-100">
+                Associate Product Manager | CSPO® Certified
+            </span>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900">
+                Transforming complex data into <span class="gradient-text">meaningful products.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
+                Leveraging 5+ years of experience in Business Analysis and Digital Transformation to drive product vision, 
+                prioritization, and successful delivery aligned with business outcomes.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.linkedin.com/in/surumyas/" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition shadow-sm">
+                    <i class="fab fa-linkedin text-blue-600 text-xl"></i> LinkedIn
+                </a>
+                <div class="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl font-semibold shadow-sm">
+                    <i class="fas fa-map-marker-alt text-red-500"></i> Pune, IN
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Metrics/Stats Quick View -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-blue-600">5+ Years</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-600">15%</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Efficiency Gain</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-600">7+</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Product Cases</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-600">CSPO®</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Projects Section -->
+    <section id="projects" class="bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-4">Product Case Studies</h2>
+                <p class="text-slate-600 max-w-2xl">A collection of end-to-end product thinking, from problem definition to roadmap planning.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Zepto Case Study -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-green-50 rounded-2xl">
+                            <i class="fas fa-shopping-cart text-green-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">Prioritization</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zepto: Average Cart Value</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Investigated the challenge of low ACV. Identified top 5 market segments and prioritized feature solutions using the <strong>RICE Matrix</strong>.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="badge badge-blue">RICE</span>
+                        <span class="badge badge-blue">Market Research</span>
+                    </div>
+                </div>
+
+                <!-- Zomato Case Study -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-red-50 rounded-2xl">
+                            <i class="fas fa-chart-line text-red-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">Analytics</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zomato: KPI & Growth</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Defined OKRs, North Star Metric, and conducted funnel/cohort analyses to identify user drop-off points, resulting in a phased roadmap.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-blue">Funnel Analysis</span>
+                        <span class="badge badge-blue">OKRs</span>
+                    </div>
+                </div>
+
+                <!-- Spotify Case Study -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-purple-50 rounded-2xl">
+                            <i class="fab fa-spotify text-purple-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">UX Strategy</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Spotify: Daylist Optimization</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Applied the <strong>Jobs to be Done (JTBD)</strong> framework and '5 Whys' analysis to uncover friction points in the Daylist user experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-blue">JTBD</span>
+                        <span class="badge badge-blue">User Research</span>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Case Study -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-blue-50 rounded-2xl">
+                            <i class="fab fa-whatsapp text-blue-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">New Feature</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">WhatsApp: Services Feature</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Conducted market and user research to introduce a 'Services' marketplace. Created high-fidelity prototypes and validated through user interviews.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-blue">Prototyping</span>
+                        <span class="badge badge-blue">Discovery</span>
+                    </div>
+                </div>
+
+                <!-- Learning LMS -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-yellow-50 rounded-2xl">
+                            <i class="fas fa-graduation-cap text-yellow-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">B2B/SaaS</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Personalized LMS</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Documented functional/non-functional requirements and designed the core system flow for a personalized learning platform.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-blue">PRD</span>
+                        <span class="badge badge-blue">Workflow Design</span>
+                    </div>
+                </div>
+
+                <!-- Meal Planning App -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
+                    <div class="mb-6 flex justify-between items-start">
+                        <div class="p-3 bg-orange-50 rounded-2xl">
+                            <i class="fas fa-utensils text-orange-600 text-xl"></i>
+                        </div>
+                        <span class="badge badge-slate">Mobile App</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Meal Planning & Vitafit</h3>
+                    <p class="text-slate-600 text-sm mb-6 flex-grow">
+                        Defined key feature sets and drafted comprehensive PRDs for health-tech solutions incorporating user feedback loops.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-blue">MVP Thinking</span>
+                        <span class="badge badge-blue">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+            
+            <div class="space-y-12">
+                <!-- V2Solutions -->
+                <div class="relative pl-8 border-l-2 border-slate-100">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.1)]"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Business Analyst (Digital Transformation)</h3>
+                            <p class="text-blue-600 font-semibold">V2Solutions, Navi Mumbai</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1 rounded-lg border border-slate-100 mt-2 md:mt-0">Jul 2024 — Present</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                            <span>Orchestrated backlog refinement and CMS creation, aligning delivery with the Product Roadmap using Agile methodologies.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                            <span>Streamlined requirements discovery for US Retirement Pension Management Software via product walkthroughs.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                            <span>Enhanced product discovery by automating reporting through AI-driven market research and digital marketing analysis.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Honeywell -->
+                <div class="relative pl-8 border-l-2 border-slate-100">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-300"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Senior Engineer (GET &gt; Engr &gt; Sr. Engr)</h3>
+                            <p class="text-blue-600 font-semibold">Honeywell Automation India Ltd, Pune</p>
+                        </div>
+                        <span class="text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1 rounded-lg border border-slate-100 mt-2 md:mt-0">Aug 2016 — Apr 2020</span>
+                    </div>
+                    <p class="mb-4 text-slate-700 italic">Received Honeywell Customer Satisfaction and Documentation Excellence Awards (2019).</p>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                            <span><strong>Improved plant reliability by 10-15%</strong> through structured problem-solving and metrics-driven optimization.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                            <span>Collaborated with cross-regional teams (U.S., APAC, Middle East) to optimize software configurations for global refinery clients.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Skills & Competencies</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- PM Toolkit -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-toolbox text-blue-600"></i> PM Toolkit
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-slate">JIRA</span>
+                        <span class="badge badge-slate">Roadmapping</span>
+                        <span class="badge badge-slate">Backlog Prioritization</span>
+                        <span class="badge badge-slate">User Stories</span>
+                        <span class="badge badge-slate">Acceptance Criteria</span>
+                        <span class="badge badge-slate">MVP Thinking</span>
+                        <span class="badge badge-slate">RICE Matrix</span>
+                    </div>
+                </div>
+
+                <!-- Data & Technical -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-code text-blue-600"></i> Data & Technical
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-slate">Power BI</span>
+                        <span class="badge badge-slate">SQL</span>
+                        <span class="badge badge-slate">Python</span>
+                        <span class="badge badge-slate">Tableau</span>
+                        <span class="badge badge-slate">Google Analytics</span>
+                        <span class="badge badge-slate">GenAI Tools</span>
+                        <span class="badge badge-slate">Excel Advanced</span>
+                    </div>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200">
+                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <i class="fas fa-brain text-blue-600"></i> Competencies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-slate">Agile/Scrum</span>
+                        <span class="badge badge-slate">Digital Transformation</span>
+                        <span class="badge badge-slate">Stakeholder Mgmt</span>
+                        <span class="badge badge-slate">Value Hypothesis</span>
+                        <span class="badge badge-slate">Product Discovery</span>
+                        <span class="badge badge-slate">Market Insight</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div>
+                    <h2 class="text-2xl font-bold mb-2">Surumya Sharma</h2>
+                    <p class="text-slate-400">Driving product success through data and empathy.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="mailto:sharmasurumya@gmail.com" class="text-slate-400 hover:text-white transition text-2xl"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/surumyas/" target="_blank" class="text-slate-400 hover:text-white transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="tel:+917709197534" class="text-slate-400 hover:text-white transition text-2xl"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+                <p>&copy; 2025 Surumya Sharma. Built for Product Impact.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
