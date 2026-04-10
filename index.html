@@ -1,384 +1,660 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surumya Sharma | Associate Product Manager Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Surumya Sharma, a CSPO® Certified Associate Product Manager. 5+ years experience in Business Analysis and Digital Transformation.">
+    <meta name="keywords" content="Product Manager, APM, CSPO, Surumya Sharma, Business Analyst, Agile, Fintech, SaaS, Pune, Product Strategy, Zepto Case Study, AOV Optimization, RICE Framework">
+    <link rel="canonical" href="https://surumyasharma.github.io/portfolio/">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Surumya Sharma | Associate Product Manager Portfolio">
+    <meta property="og:description" content="Portfolio of Surumya Sharma, a CSPO® Certified Associate Product Manager. 5+ years experience in Business Analysis and Digital Transformation.">
+    <meta property="og:url" content="https://surumyasharma.github.io/portfolio/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Surumya Sharma | Associate Product Manager">
+    <meta name="twitter:description" content="Product-focused professional with 5+ years of experience in data-driven product strategy.">
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Surumya Sharma",
+      "jobTitle": "Associate Product Manager",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressCountry": "IN"
+      },
+      "url": "https://surumyasharma.github.io/portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/surumyas/"
+      ],
+      "knowsAbout": ["Product Management", "Business Analysis", "Agile", "Digital Transformation", "CSPO", "SQL", "Python", "Product Strategy", "Market Analysis"]
+    }
+    </script>
+
+    <!-- External Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { blue: '#2563eb', purple: '#7c3aed' }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .badge {
-            @apply px-3 py-1 rounded-full text-xs font-medium;
-        }
-
-        .badge-blue { @apply bg-blue-100 text-blue-700; }
-        .badge-purple { @apply bg-purple-100 text-purple-700; }
-        .badge-slate { @apply bg-slate-100 text-slate-700; }
-
-        section {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s; overflow-x: hidden; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(229, 231, 235, 0.5); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(51, 65, 85, 0.5); }
+        .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; padding-bottom: 0.1em; }
+        .card-hover { transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); }
+        .card-hover:hover { transform: translateY(-8px); border-color: #2563eb; box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15); }
+        .dark .card-hover:hover { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5); }
+        .btn-interact { transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .btn-interact:hover { transform: translateY(-2px) scale(1.02); }
+        .btn-interact:active { transform: scale(0.98); }
+        .typing::after { content: '|'; animation: blink 1s infinite; margin-left: 2px; color: #2563eb; }
+        @keyframes blink { 50% { opacity: 0; } }
+        .timeline-track { position: relative; background: #e2e8f0; }
+        .dark .timeline-track { background: #334155; }
+        .timeline-fill { background: linear-gradient(to bottom, #2563eb, #7c3aed); width: 100%; position: absolute; top: 0; left: 0; border-radius: 9999px; transition: height 0.08s linear; }
+        .timeline-dot { transition: all 0.5s ease; }
+        .timeline-dot.lit { background-color: #2563eb !important; border-color: #2563eb !important; box-shadow: 0 0 16px rgba(37, 99, 235, 0.5); }
+        .timeline-dot.lit i { color: white !important; }
+        .filter-btn { transition: all 0.2s ease; }
+        .filter-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .markdown-body h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b; }
+        .dark .markdown-body h1 { color: #f8fafc; }
+        .markdown-body h2 { font-size: 1.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #334155; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }
+        .dark .markdown-body h2 { color: #cbd5e1; border-color: #334155; }
+        .markdown-body p { margin-bottom: 1rem; line-height: 1.8; color: #475569; }
+        .dark .markdown-body p { color: #94a3b8; }
+        .markdown-body ul { list-style-type: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+        .markdown-body ol { list-style-type: decimal; padding-left: 1.25rem; margin-bottom: 1rem; }
+        .markdown-body li { margin-bottom: 0.35rem; line-height: 1.7; color: #475569; }
+        .dark .markdown-body li { color: #94a3b8; }
+        .markdown-body table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 0.875rem; }
+        .markdown-body th, .markdown-body td { border: 1px solid #e2e8f0; padding: 0.5rem; text-align: left; }
+        .markdown-body th { background: #f8fafc; font-weight: 700; }
+        .dark .markdown-body th { background: #1e293b; }
+        .dark .markdown-body th, .dark .markdown-body td { border-color: #334155; }
+        .markdown-body blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; font-style: italic; color: #64748b; margin-bottom: 1rem; }
+        .markdown-body strong { color: #1e293b; }
+        .dark .markdown-body strong { color: #e2e8f0; }
+        .markdown-body a { color: #2563eb; text-decoration: underline; }
+        .dark .markdown-body a { color: #60a5fa; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-blue-100 dark:selection:bg-blue-900/30">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight gradient-text">SURUMYA SHARMA</a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Case Studies</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-            </div>
-            <a href="mailto:sharmasurumya@gmail.com" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                Contact Me
-            </a>
+    <nav id="main-nav" class="fixed top-0 w-full z-50 glass-nav" role="navigation"></nav>
+
+    <!-- App Content (rendered by router) -->
+    <div id="app"></div>
+
+    <noscript>
+        <div style="padding:3rem;text-align:center;font-family:Inter,sans-serif;max-width:600px;margin:0 auto">
+            <h1 style="font-size:1.5rem;margin-bottom:1rem">Surumya Sharma — Associate Product Manager</h1>
+            <p>This portfolio requires JavaScript to display content. Please enable JavaScript in your browser settings.</p>
+            <p style="margin-top:1rem"><a href="mailto:sharmasurumya@gmail.com">sharmasurumya@gmail.com</a> · <a href="https://www.linkedin.com/in/surumyas/">LinkedIn</a></p>
         </div>
-    </nav>
+    </noscript>
 
-    <!-- Hero Section -->
-    <header class="pt-32 pb-20 bg-white border-b border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full border border-blue-100">
-                Associate Product Manager | CSPO® Certified
-            </span>
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900">
-                Transforming complex data into <span class="gradient-text">meaningful products.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-                Leveraging 5+ years of experience in Business Analysis and Digital Transformation to drive product vision, 
-                prioritization, and successful delivery aligned with business outcomes.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.linkedin.com/in/surumyas/" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl font-semibold hover:bg-slate-50 transition shadow-sm">
-                    <i class="fab fa-linkedin text-blue-600 text-xl"></i> LinkedIn
-                </a>
-                <div class="flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-xl font-semibold shadow-sm">
-                    <i class="fas fa-map-marker-alt text-red-500"></i> Pune, IN
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Metrics/Stats Quick View -->
-    <section class="py-12 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <div class="text-3xl font-bold text-blue-600">5+ Years</div>
-                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Experience</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-blue-600">15%</div>
-                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Efficiency Gain</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-blue-600">7+</div>
-                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Product Cases</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-bold text-blue-600">CSPO®</div>
-                    <div class="text-sm text-slate-500 font-medium uppercase tracking-wider mt-1">Certified</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies / Projects Section -->
-    <section id="projects" class="bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold mb-4">Product Case Studies</h2>
-                <p class="text-slate-600 max-w-2xl">A collection of end-to-end product thinking, from problem definition to roadmap planning.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Zepto Case Study -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-green-50 rounded-2xl">
-                            <i class="fas fa-shopping-cart text-green-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">Prioritization</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zepto: Average Cart Value</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Investigated the challenge of low ACV. Identified top 5 market segments and prioritized feature solutions using the <strong>RICE Matrix</strong>.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge badge-blue">RICE</span>
-                        <span class="badge badge-blue">Market Research</span>
-                    </div>
-                </div>
-
-                <!-- Zomato Case Study -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-red-50 rounded-2xl">
-                            <i class="fas fa-chart-line text-red-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">Analytics</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">Zomato: KPI & Growth</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Defined OKRs, North Star Metric, and conducted funnel/cohort analyses to identify user drop-off points, resulting in a phased roadmap.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-blue">Funnel Analysis</span>
-                        <span class="badge badge-blue">OKRs</span>
-                    </div>
-                </div>
-
-                <!-- Spotify Case Study -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-purple-50 rounded-2xl">
-                            <i class="fab fa-spotify text-purple-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">UX Strategy</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">Spotify: Daylist Optimization</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Applied the <strong>Jobs to be Done (JTBD)</strong> framework and '5 Whys' analysis to uncover friction points in the Daylist user experience.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-blue">JTBD</span>
-                        <span class="badge badge-blue">User Research</span>
-                    </div>
-                </div>
-
-                <!-- WhatsApp Case Study -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-blue-50 rounded-2xl">
-                            <i class="fab fa-whatsapp text-blue-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">New Feature</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">WhatsApp: Services Feature</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Conducted market and user research to introduce a 'Services' marketplace. Created high-fidelity prototypes and validated through user interviews.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-blue">Prototyping</span>
-                        <span class="badge badge-blue">Discovery</span>
-                    </div>
-                </div>
-
-                <!-- Learning LMS -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-yellow-50 rounded-2xl">
-                            <i class="fas fa-graduation-cap text-yellow-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">B2B/SaaS</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">Personalized LMS</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Documented functional/non-functional requirements and designed the core system flow for a personalized learning platform.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-blue">PRD</span>
-                        <span class="badge badge-blue">Workflow Design</span>
-                    </div>
-                </div>
-
-                <!-- Meal Planning App -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-hover flex flex-col h-full">
-                    <div class="mb-6 flex justify-between items-start">
-                        <div class="p-3 bg-orange-50 rounded-2xl">
-                            <i class="fas fa-utensils text-orange-600 text-xl"></i>
-                        </div>
-                        <span class="badge badge-slate">Mobile App</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-slate-900">Meal Planning & Vitafit</h3>
-                    <p class="text-slate-600 text-sm mb-6 flex-grow">
-                        Defined key feature sets and drafted comprehensive PRDs for health-tech solutions incorporating user feedback loops.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-blue">MVP Thinking</span>
-                        <span class="badge badge-blue">UI/UX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Experience Section -->
-    <section id="experience" class="bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Work Experience</h2>
-            
-            <div class="space-y-12">
-                <!-- V2Solutions -->
-                <div class="relative pl-8 border-l-2 border-slate-100">
-                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_0_4px_rgba(37,99,235,0.1)]"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Business Analyst (Digital Transformation)</h3>
-                            <p class="text-blue-600 font-semibold">V2Solutions, Navi Mumbai</p>
-                        </div>
-                        <span class="text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1 rounded-lg border border-slate-100 mt-2 md:mt-0">Jul 2024 — Present</span>
-                    </div>
-                    <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
-                            <span>Orchestrated backlog refinement and CMS creation, aligning delivery with the Product Roadmap using Agile methodologies.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
-                            <span>Streamlined requirements discovery for US Retirement Pension Management Software via product walkthroughs.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
-                            <span>Enhanced product discovery by automating reporting through AI-driven market research and digital marketing analysis.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Honeywell -->
-                <div class="relative pl-8 border-l-2 border-slate-100">
-                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-slate-300"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Senior Engineer (GET &gt; Engr &gt; Sr. Engr)</h3>
-                            <p class="text-blue-600 font-semibold">Honeywell Automation India Ltd, Pune</p>
-                        </div>
-                        <span class="text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1 rounded-lg border border-slate-100 mt-2 md:mt-0">Aug 2016 — Apr 2020</span>
-                    </div>
-                    <p class="mb-4 text-slate-700 italic">Received Honeywell Customer Satisfaction and Documentation Excellence Awards (2019).</p>
-                    <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
-                            <span><strong>Improved plant reliability by 10-15%</strong> through structured problem-solving and metrics-driven optimization.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
-                            <span>Collaborated with cross-regional teams (U.S., APAC, Middle East) to optimize software configurations for global refinery clients.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12 text-center">Skills & Competencies</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- PM Toolkit -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-toolbox text-blue-600"></i> PM Toolkit
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-slate">JIRA</span>
-                        <span class="badge badge-slate">Roadmapping</span>
-                        <span class="badge badge-slate">Backlog Prioritization</span>
-                        <span class="badge badge-slate">User Stories</span>
-                        <span class="badge badge-slate">Acceptance Criteria</span>
-                        <span class="badge badge-slate">MVP Thinking</span>
-                        <span class="badge badge-slate">RICE Matrix</span>
-                    </div>
-                </div>
-
-                <!-- Data & Technical -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-code text-blue-600"></i> Data & Technical
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-slate">Power BI</span>
-                        <span class="badge badge-slate">SQL</span>
-                        <span class="badge badge-slate">Python</span>
-                        <span class="badge badge-slate">Tableau</span>
-                        <span class="badge badge-slate">Google Analytics</span>
-                        <span class="badge badge-slate">GenAI Tools</span>
-                        <span class="badge badge-slate">Excel Advanced</span>
-                    </div>
-                </div>
-
-                <!-- Core Competencies -->
-                <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                    <h3 class="font-bold text-lg mb-6 flex items-center gap-2">
-                        <i class="fas fa-brain text-blue-600"></i> Competencies
-                    </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-slate">Agile/Scrum</span>
-                        <span class="badge badge-slate">Digital Transformation</span>
-                        <span class="badge badge-slate">Stakeholder Mgmt</span>
-                        <span class="badge badge-slate">Value Hypothesis</span>
-                        <span class="badge badge-slate">Product Discovery</span>
-                        <span class="badge badge-slate">Market Insight</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-16">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                <div>
-                    <h2 class="text-2xl font-bold mb-2">Surumya Sharma</h2>
-                    <p class="text-slate-400">Driving product success through data and empathy.</p>
-                </div>
-                <div class="flex gap-6">
-                    <a href="mailto:sharmasurumya@gmail.com" class="text-slate-400 hover:text-white transition text-2xl"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/surumyas/" target="_blank" class="text-slate-400 hover:text-white transition text-2xl"><i class="fab fa-linkedin"></i></a>
-                    <a href="tel:+917709197534" class="text-slate-400 hover:text-white transition text-2xl"><i class="fas fa-phone"></i></a>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-                <p>&copy; 2025 Surumya Sharma. Built for Product Impact.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Data -->
+    <script src="data.js"></script>
 
     <script>
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+    // ════════════════════════════════════════════════════════════
+    //  ROUTER — Hash-based navigation between Home and Post views
+    // ════════════════════════════════════════════════════════════
+
+    let currentView = null;
+    let activeFilter = 'All';
+    let pendingScroll = null;
+
+    function router() {
+        const hash = location.hash;
+
+        if (hash.startsWith('#/post/')) {
+            const id = hash.replace('#/post/', '');
+            if (currentView !== 'post-' + id) {
+                currentView = 'post-' + id;
+                renderPostPage(id);
+            }
+        } else {
+            if (currentView !== 'home') {
+                currentView = 'home';
+                renderHomePage();
+            }
+            if (pendingScroll) {
+                const target = pendingScroll;
+                pendingScroll = null;
+                setTimeout(() => {
+                    document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }
+
+    window.addEventListener('hashchange', router);
+
+
+    // ════════════════════════════════════════════════════════════
+    //  NAVIGATION
+    // ════════════════════════════════════════════════════════════
+
+    function renderNavHome() {
+        const navLink = (link) => `
+            <a onclick="navigateToSection('${link.section}')" class="cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition relative group">
+                ${link.label}<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+            </a>`;
+
+        const mobileLink = (link) => `
+            <a onclick="navigateToSection('${link.section}'); toggleMenu()" class="cursor-pointer text-lg font-bold">${link.label}</a>`;
+
+        document.getElementById('main-nav').innerHTML = `
+            <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+                <a href="#/" class="text-xl font-extrabold tracking-tight gradient-text uppercase">${SITE.name}</a>
+                <div class="hidden md:flex items-center space-x-10 text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    ${SITE.navLinks.map(navLink).join('')}
+                    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <div class="flex items-center gap-2 md:hidden">
+                    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="p-2 rounded-lg text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-moon dark:hidden text-lg"></i><i class="fas fa-sun hidden dark:block text-lg"></i>
+                    </button>
+                    <button onclick="toggleMenu()" aria-label="Toggle menu" class="text-2xl p-2 text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 p-6 flex flex-col space-y-5 shadow-2xl">
+                ${SITE.navLinks.map(mobileLink).join('')}
+                <hr class="border-slate-100 dark:border-slate-800">
+                <a href="mailto:${SITE.email}" class="text-blue-600 dark:text-blue-400 font-black flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+            </div>`;
+    }
+
+    function renderNavPost() {
+        document.getElementById('main-nav').innerHTML = `
+            <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+                <a href="#/" class="flex items-center gap-3 text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>`;
+    }
+
+    function navigateToSection(section) {
+        if (currentView === 'home') {
+            document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            pendingScroll = section;
+            location.hash = '#/';
+        }
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  HOME PAGE — All sections rendered together
+    // ════════════════════════════════════════════════════════════
+
+    function renderHomePage() {
+        renderNavHome();
+        document.title = `${SITE.name} | ${SITE.title} Portfolio`;
+
+        const app = document.getElementById('app');
+        app.innerHTML = `
+            <header id="hero" class="pt-32 pb-16 md:pt-48 md:pb-24 bg-white dark:bg-slate-950 relative overflow-hidden"></header>
+            <section id="metrics" class="py-12 bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800"></section>
+            <section id="writing" class="bg-slate-50/50 dark:bg-slate-900/20 py-24"></section>
+            <section id="experience" class="py-24 bg-white dark:bg-slate-950"></section>
+            <footer id="main-footer" class="bg-slate-950 text-white py-20"></footer>`;
+
+        renderHero();
+        renderMetrics();
+        renderWritingSection();
+        renderExperience();
+        renderFooter();
+        initTypingAnimation();
+        initCounterAnimation();
+        initTimelineScroll();
+        window.scrollTo(0, 0);
+    }
+
+    function renderHero() {
+        const certBadge = SITE.certifications
+            .map(c => `<span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> ${c}`)
+            .join(' ');
+
+        document.getElementById('hero').innerHTML = `
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute top-10 left-[10%] w-64 h-64 bg-blue-500 rounded-full blur-[100px]"></div>
+                <div class="absolute bottom-10 right-[10%] w-64 h-64 bg-purple-500 rounded-full blur-[100px]"></div>
+            </div>
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+                <div class="animate-fade-in-up">
+                    <span class="inline-flex items-center gap-3 px-5 py-2 mb-8 text-[11px] font-black text-blue-700 bg-blue-50 dark:bg-blue-900/30 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800 uppercase tracking-[0.2em] shadow-sm">
+                        ${SITE.title} ${certBadge}
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                        ${SITE.heroPrefix} <br class="hidden sm:block"><span class="gradient-text typing" id="hero-typing"></span>
+                    </h1>
+                    <p class="text-base md:text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        ${SITE.bio}
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="mailto:${SITE.email}" class="btn-interact w-full sm:w-auto flex items-center justify-center gap-2 px-12 py-5 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-500/25">Work With Me</a>
+                        <a href="${SITE.linkedin}" target="_blank" rel="noopener noreferrer" class="btn-interact w-full sm:w-auto flex items-center justify-center gap-2 px-12 py-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition shadow-sm text-slate-700 dark:text-slate-200">
+                            <i class="fab fa-linkedin text-blue-600 text-xl"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    function renderMetrics() {
+        document.getElementById('metrics').innerHTML = `
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                ${METRICS.map(m => {
+                    const hasNumber = /^\d+/.test(m.value);
+                    const display = hasNumber ? '0' : m.value;
+                    const attr = hasNumber ? ` data-counter="${m.value}"` : '';
+                    return `
+                    <div class="group">
+                        <div class="text-3xl md:text-4xl font-black gradient-text mb-1"${attr}>${display}</div>
+                        <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400">${m.label}</div>
+                    </div>`;
+                }).join('')}
+            </div>`;
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  WRITING SECTION — Unified posts with category filters
+    // ════════════════════════════════════════════════════════════
+
+    function renderPostCard(post) {
+        return `
+            <a href="#/post/${post.id}" class="bg-white dark:bg-slate-900/40 p-10 rounded-[3rem] border border-slate-200 dark:border-slate-800 card-hover flex flex-col h-full cursor-pointer block no-underline">
+                <div class="mb-10 flex justify-between items-start">
+                    <div class="w-14 h-14 bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center">
+                        <i class="${post.icon} ${post.iconColor} text-2xl"></i>
+                    </div>
+                    <span class="text-[10px] uppercase font-black tracking-[0.2em] text-slate-400 bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-700">${post.badge}</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">${post.title}</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">${post.summary}</p>
+                <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-black text-xs uppercase tracking-widest group cursor-pointer">
+                    Read More <span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+                </div>
+            </a>`;
+    }
+
+    function renderWritingSection() {
+        const categories = ['All', ...new Set(POSTS.map(p => p.category))];
+        const filtered = activeFilter === 'All'
+            ? [...POSTS].sort((a, b) => b.date.localeCompare(a.date))
+            : POSTS.filter(p => p.category === activeFilter).sort((a, b) => b.date.localeCompare(a.date));
+
+        const filterButtons = categories.map(cat => `
+            <button onclick="setFilter('${cat}')"
+                class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition ${activeFilter === cat ? 'active' : ''}">
+                ${cat}
+            </button>`).join('');
+
+        document.getElementById('writing').innerHTML = `
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tight">Writing</h2>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg">Case studies, product analyses, and strategic deep dives.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 mb-12">
+                    ${filterButtons}
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    ${filtered.map(renderPostCard).join('')}
+                </div>
+            </div>`;
+    }
+
+    function setFilter(category) {
+        activeFilter = category;
+        renderWritingSection();
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  EXPERIENCE
+    // ════════════════════════════════════════════════════════════
+
+    function renderExperienceEntry(entry, index) {
+        const isLeft        = index % 2 === 0;
+        const isLast        = index === EXPERIENCE.length - 1;
+        const periodColor   = entry.isCurrent ? 'text-blue-600' : 'text-slate-500';
+        const iconBg        = entry.isCurrent ? 'bg-blue-600' : 'bg-slate-200 dark:bg-slate-800';
+        const iconText      = entry.isCurrent ? 'text-white' : 'text-slate-500';
+        const wrapperMargin = isLast ? 'mb-12' : 'mb-12 md:mb-24';
+
+        const card = `
+            <div class="w-full md:flex-1 ${isLeft ? 'md:pr-16 md:text-right mb-8 md:mb-0' : 'md:pl-16'}">
+                <div class="bg-slate-50 dark:bg-slate-900/40 p-10 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 hover:border-blue-500/40 transition duration-300">
+                    <span class="${periodColor} font-bold text-xs mb-4 block uppercase tracking-[0.2em]">${entry.period}</span>
+                    <h3 class="text-xl md:text-2xl font-black mb-2">${entry.role}</h3>
+                    <p class="text-slate-900 dark:text-slate-200 font-bold mb-5">${entry.company}</p>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">${entry.description}</p>
+                </div>
+            </div>`;
+
+        const icon = `
+            <div class="timeline-dot hidden md:flex z-10 w-12 h-12 rounded-full ${iconBg} border-4 border-white dark:border-slate-950 shadow-xl items-center justify-center" data-timeline-dot="${index}">
+                <i class="fas ${entry.icon} ${iconText} text-sm"></i>
+            </div>`;
+
+        const spacer = `<div class="hidden md:block md:flex-1"></div>`;
+
+        return `
+            <div class="relative ${wrapperMargin} group">
+                <div class="flex flex-col md:flex-row items-start md:items-center">
+                    ${isLeft ? card + icon + spacer : spacer + icon + card}
+                </div>
+            </div>`;
+    }
+
+    function renderExperience() {
+        document.getElementById('experience').innerHTML = `
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tight">Professional Journey</h2>
+                    <div class="h-1.5 w-16 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 timeline-track -translate-x-1/2 rounded-full">
+                        <div id="timeline-fill" class="timeline-fill" style="height:0"></div>
+                    </div>
+                    ${EXPERIENCE.map(renderExperienceEntry).join('')}
+                </div>
+            </div>`;
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  FOOTER
+    // ════════════════════════════════════════════════════════════
+
+    function renderFooter() {
+        const socialIcon = (link) => `
+            <a href="${link.url}" ${link.external ? 'target="_blank" rel="noopener noreferrer"' : ''}
+               class="w-14 h-14 rounded-2xl border border-slate-800 flex items-center justify-center hover:bg-blue-600 transition">
+                <i class="${link.icon} text-xl"></i>
+            </a>`;
+
+        const resumeLink = SITE.resumeUrl
+            ? `<a href="${SITE.resumeUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">Resume</a>`
+            : '';
+
+        document.getElementById('main-footer').innerHTML = `
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-2xl md:text-4xl font-black mb-10">${SITE.footerTagline}</h2>
+                <div class="flex justify-center gap-6 mb-16">
+                    ${SITE.socialLinks.map(socialIcon).join('')}
+                </div>
+                <div class="pt-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 text-[10px] font-black uppercase tracking-widest">
+                    <p>${SITE.name} &copy; ${new Date().getFullYear()}</p>
+                    <div class="flex gap-8">
+                        <span>${SITE.location}</span>
+                        ${resumeLink}
+                        <span class="text-blue-500">${SITE.certifications.join(' · ')}</span>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  POST PAGE — Full-page blog view with prev/next
+    // ════════════════════════════════════════════════════════════
+
+    async function renderPostPage(id) {
+        const post = POSTS.find(p => p.id === id);
+        if (!post) { location.hash = '#/'; return; }
+
+        renderNavPost();
+        document.title = `${post.title} | ${SITE.name}`;
+        window.scrollTo(0, 0);
+
+        const currentIndex = POSTS.findIndex(p => p.id === id);
+        const prevPost = currentIndex > 0 ? POSTS[currentIndex - 1] : null;
+        const nextPost = currentIndex < POSTS.length - 1 ? POSTS[currentIndex + 1] : null;
+
+        const validLinks = post.links ? Object.entries(post.links).filter(([, url]) => url) : [];
+        const linksHtml = validLinks.length > 0
+            ? `<div class="flex flex-wrap gap-3 mb-8">
+                ${validLinks.map(([text, url]) => `
+                    <a href="${url}" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1.5 px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-full border border-blue-100 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition">
+                        <i class="fas fa-arrow-up-right-from-square text-[9px]"></i> ${text}
+                    </a>`).join('')}
+               </div>`
+            : '';
+
+        const prevNextHtml = `
+            <div class="flex flex-col sm:flex-row justify-between items-stretch gap-4 mt-16 pt-12 border-t border-slate-200 dark:border-slate-800">
+                ${prevPost ? `
+                <a href="#/post/${prevPost.id}" class="flex-1 group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition no-underline">
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-2"><i class="fas fa-arrow-left mr-1"></i> Previous</div>
+                    <div class="text-sm font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">${prevPost.title}</div>
+                </a>` : '<div class="flex-1"></div>'}
+                ${nextPost ? `
+                <a href="#/post/${nextPost.id}" class="flex-1 group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/40 transition text-right no-underline">
+                    <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-2">Next <i class="fas fa-arrow-right ml-1"></i></div>
+                    <div class="text-sm font-black text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">${nextPost.title}</div>
+                </a>` : '<div class="flex-1"></div>'}
+            </div>`;
+
+        const app = document.getElementById('app');
+        app.innerHTML = `
+            <article class="pt-28 pb-24 bg-white dark:bg-slate-950 min-h-screen">
+                <div class="max-w-3xl mx-auto px-6">
+                    <div class="mb-10">
+                        <div class="flex flex-wrap items-center gap-3 mb-6">
+                            <span class="text-[10px] uppercase font-black tracking-[0.2em] text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full border border-blue-100 dark:border-blue-800">${post.category}</span>
+                            <span class="text-[10px] uppercase font-black tracking-[0.2em] text-slate-400 bg-slate-50 dark:bg-slate-800 px-3 py-1 rounded-full border border-slate-100 dark:border-slate-700">${post.badge}</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">${formatDate(post.date)}</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight mb-6">${post.title}</h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">${post.summary}</p>
+                        ${linksHtml}
+                    </div>
+                    <hr class="border-slate-200 dark:border-slate-800 mb-10">
+                    <div id="post-body" class="markdown-body">
+                        <div class="flex items-center justify-center py-20">
+                            <div class="text-slate-400 text-sm"><i class="fas fa-spinner fa-spin mr-2"></i> Loading content...</div>
+                        </div>
+                    </div>
+                    ${prevNextHtml}
+                </div>
+            </article>
+            <footer id="main-footer" class="bg-slate-950 text-white py-20"></footer>`;
+
+        renderFooter();
+
+        try {
+            const response = await fetch(`posts/${id}.md`);
+            if (!response.ok) throw new Error('Not found');
+            const markdown = await response.text();
+            document.getElementById('post-body').innerHTML = marked.parse(markdown);
+        } catch (e) {
+            document.getElementById('post-body').innerHTML = `
+                <div class="text-center py-20">
+                    <i class="fas fa-exclamation-triangle text-3xl text-slate-300 dark:text-slate-600 mb-4"></i>
+                    <p class="text-slate-500">Could not load post content. Make sure you're running a local server for development.</p>
+                    <code class="text-xs text-slate-400 mt-2 block">python -m http.server 8000</code>
+                </div>`;
+        }
+    }
+
+    function formatDate(dateStr) {
+        const [year, month] = dateStr.split('-');
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return `${months[parseInt(month) - 1]} ${year}`;
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  UTILITIES — Theme, navigation, typing animation
+    // ════════════════════════════════════════════════════════════
+
+    function initTheme() {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    }
+
+    function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    function initTypingAnimation() {
+        const el = document.getElementById('hero-typing');
+        if (!el) return;
+        const phrases = SITE.heroTypingPhrases;
+        let wordIdx = 0, charIdx = 0, isDeleting = false;
+
+        function tick() {
+            if (!document.getElementById('hero-typing')) return;
+            const current = phrases[wordIdx];
+            charIdx += isDeleting ? -1 : 1;
+            el.textContent = current.substring(0, charIdx);
+
+            let speed = isDeleting ? 50 : 120;
+            if (!isDeleting && charIdx === current.length) { isDeleting = true; speed = 2000; }
+            else if (isDeleting && charIdx === 0) { isDeleting = false; wordIdx = (wordIdx + 1) % phrases.length; speed = 500; }
+
+            setTimeout(tick, speed);
+        }
+
+        tick();
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  SCROLL ANIMATIONS — Counter + Timeline glow
+    // ════════════════════════════════════════════════════════════
+
+    function initCounterAnimation() {
+        const section = document.getElementById('metrics');
+        if (!section) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.querySelectorAll('[data-counter]').forEach(el => {
+                    const raw = el.dataset.counter;
+                    const match = raw.match(/^(\d+)(.*)$/);
+                    if (!match) { el.textContent = raw; return; }
+
+                    const target = parseInt(match[1]);
+                    const suffix = match[2];
+                    const duration = 1500;
+                    const start = performance.now();
+
+                    (function step(now) {
+                        const progress = Math.min(1, (now - start) / duration);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.floor(target * eased) + suffix;
+                        if (progress < 1) requestAnimationFrame(step);
+                    })(performance.now());
                 });
+                observer.unobserve(entry.target);
             });
-        });
+        }, { threshold: 0.4 });
+
+        observer.observe(section);
+    }
+
+    function initTimelineScroll() {
+        let ticking = false;
+
+        function update() {
+            const fill = document.getElementById('timeline-fill');
+            if (!fill) return;
+
+            const track = fill.parentElement;
+            const trackRect = track.getBoundingClientRect();
+            const triggerPoint = window.innerHeight * 0.55;
+
+            const progress = Math.min(1, Math.max(0, (triggerPoint - trackRect.top) / trackRect.height));
+            fill.style.height = (progress * 100) + '%';
+
+            const fillBottom = trackRect.top + trackRect.height * progress;
+            document.querySelectorAll('[data-timeline-dot]').forEach(dot => {
+                const dotRect = dot.getBoundingClientRect();
+                const dotCenter = dotRect.top + dotRect.height / 2;
+                dot.classList.toggle('lit', dotCenter <= fillBottom + 10);
+            });
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) { ticking = true; requestAnimationFrame(update); }
+        }, { passive: true });
+
+        update();
+    }
+
+
+    // ════════════════════════════════════════════════════════════
+    //  INITIALIZATION
+    // ════════════════════════════════════════════════════════════
+
+    window.onload = function init() {
+        initTheme();
+        router();
+    };
     </script>
 </body>
 </html>
