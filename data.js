@@ -11,7 +11,7 @@ const SITE = {
     email:          'sharmasurumya@gmail.com',
     location:       'Pune, India',
     linkedin:       'https://www.linkedin.com/in/surumyas/',
-    resumeUrl:      'resume.pdf',
+    resumeUrl:      'https://assets.surumyasharma.com/Resume%20Product%20Management%20Surumya%20Sharma.pdf',
 
     bio: 'Product-focused professional with 5+ years of experience leveraging data-driven insights and cross-functional agility to drive product vision and delivery.',
 
@@ -86,7 +86,7 @@ const POSTS = [
         badge:     'PRD',
         title:     'VitaFit: StayFit+ Gamification & Community PRD',
         summary:   'Authored a full PRD for gamified streaks and accountability squads to transform VitaFit from a passive workout library into a community fitness ecosystem. Prioritized via RICE, designed A/B rollout plan.',
-        links:     {}
+        links:     {"View Product Requirements Decument": "https://assets.surumyasharma.com/VitaFit%20Product%20Requirements%20Document%20(PRD).pdf"}
     },
     {
         id:        'mealplan',
@@ -97,7 +97,7 @@ const POSTS = [
         badge:     'Product Strategy',
         title:     'Meal Planning Tool: Decision Logistics Strategy',
         summary:   'Designed a pantry-first, time-adaptive meal planning tool for busy professionals using JTBD, 5 Whys root cause analysis, RICE prioritization, and prototype-validated user testing.',
-        links:     {}
+        links:     {"View Wireframe": "https://assets.surumyasharma.com/Meal%20Planning%20Tool%20Wireframe.pdf", "View Presentation": "https://assets.surumyasharma.com/Meal%20Planning%20Tool%20Presentation.pdf"}
     },
     {
         id:        'whatsapp',
@@ -108,7 +108,7 @@ const POSTS = [
         badge:     'Market Research',
         title:     'WhatsApp: Community Service Discovery',
         summary:   'Evaluated WhatsApp\'s opportunity in local service discovery through TAM/SAM/SOM market sizing, Porter\'s Five Forces, user surveys, and prototype-validated interviews.',
-        links:     {}
+        links:     {"View Case Study": "https://assets.surumyasharma.com/WhatsApp%20Case%20Study%20-%20Market%20and%20User%20Reasearch.pdf"}
     },
     {
         id:        'zepto',
@@ -119,7 +119,7 @@ const POSTS = [
         badge:     'Strategic Growth',
         title:     'Zepto AOV Strategy: Optimizing Unit Economics',
         summary:   'Investigated low Average Order Value (AOV) issues relative to competitors (~₹500 vs ₹650+). Prioritized solutions via RICE framework to drive profitability.',
-        links:     {}
+        links:     {"View Case Study": "https://assets.surumyasharma.com/Zepto%20Case%20Study%20-%20AirTribe.pdf"}
     },
     {
         id:        'twitter',
@@ -130,7 +130,7 @@ const POSTS = [
         badge:     'Growth',
         title:     'Twitter (X): Funnel Optimization',
         summary:   'Mapped the AARRR funnel to identify discovery friction. Proposed Guest Mode and Interest Graph features to improve activation.',
-        links:     {}
+        links:     {"View Case Study": "https://assets.surumyasharma.com/Twitter%20(X)%20Case%20Study.pdf"}
     },
     {
         id:        'spotify',
@@ -141,7 +141,7 @@ const POSTS = [
         badge:     'Strategy',
         title:     'Spotify: Daylist Optimization',
         summary:   'Utilized JTBD and "5 Whys" to solve Daylist churn. Proposed a mood-driven personalization model to improve repeat usage.',
-        links:     {}
+        links:     {"View Case Study": "https://assets.surumyasharma.com/Spotify%20Case%20Study.pdf"}
     },
     {
         id:        'zomato',
@@ -152,7 +152,7 @@ const POSTS = [
         badge:     'KPI & Retention',
         title:     'Zomato: KPI Framework & Tier-1 Retention Strategy',
         summary:   'Defined MATU as North Star metric, built OKRs from KPI baselines, and designed a phased roadmap with funnel and cohort analysis to drive Tier-1 order frequency and retention.',
-        links:     {}
+        links:     {"View Case Study": "https://assets.surumyasharma.com/ZOMATO%20Case%20Study%20Document.pdf", "View Presentation": "https://assets.surumyasharma.com/ZOMATO%20Case%20Study%20Presentation.pptx"}
     },
     {
         id:        'lms',
@@ -163,6 +163,6 @@ const POSTS = [
         badge:     'System Design',
         title:     'Personalized Learning Recommendation System',
         summary:   'Designed a career-aligned recommendation engine with user stories, functional/non-functional requirements, layered system architecture, and a privacy-first trade-off analysis.',
-        links:     {}
+        links:     {"View LMS Requirement Document": "https://assets.surumyasharma.com/Personalized%20Learning%20Recommendation%20System.pdf"}
     }
 ];
