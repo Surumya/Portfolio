@@ -6,7 +6,7 @@
 
 const SITE = {
     name:           'Surumya Sharma',
-    title:          'Associate Product Manager',
+    title:          'Product Manager',
     certifications: ['CSPO® Certified'],
     email:          'sharmasurumya@gmail.com',
     location:       'Pune, India',
