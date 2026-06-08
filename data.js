@@ -13,7 +13,7 @@ const SITE = {
     linkedin:       'https://www.linkedin.com/in/surumyas/',
     resumeUrl:      'https://assets.surumyasharma.com/Resume%20Product%20Management%20Surumya%20Sharma.pdf',
 
-    bio: 'Product-focused professional with 5+ years of experience leveraging data-driven insights and cross-functional agility to drive product vision and delivery.',
+    bio: 'Product-focused professional with 6+ years of experience leveraging data-driven insights and cross-functional agility to drive product vision and delivery.',
 
     heroPrefix:         'Building data-backed',
     heroTypingPhrases:  ['product solutions.', 'growth strategy.', 'user experiences.', 'strategic roadmaps.'],
@@ -36,7 +36,7 @@ const SITE = {
 // ────────────────────────────────────────────────────────────
 
 const METRICS = [
-    { value: '5+',    label: 'Years Experience' },
+    { value: '6+',    label: 'Years Experience' },
     { value: '15%',   label: 'Efficiency Gain' },
     { value: '8+',    label: 'Case Studies' },
     { value: 'Agile', label: 'Practitioner' }
@@ -162,6 +162,17 @@ const POSTS = [
         iconColor: 'text-blue-500',
         badge:     'System Design',
         title:     'Personalized Learning Recommendation System',
+        summary:   'Designed a career-aligned recommendation engine with user stories, functional/non-functional requirements, layered system architecture, and a privacy-first trade-off analysis.',
+        links:     {"View LMS Requirement Document": "https://assets.surumyasharma.com/Personalized%20Learning%20Recommendation%20System.pdf"}
+    },
+    {
+        id:        'capstone',
+        category:  'Capstone',
+        date:      '2026-05',
+        icon:      'fa-solid fa fa-trophy',
+        iconColor: 'text-blue-500',
+        badge:     'Capstone Project',
+        title:     'Stock Trading App',
         summary:   'Designed a career-aligned recommendation engine with user stories, functional/non-functional requirements, layered system architecture, and a privacy-first trade-off analysis.',
         links:     {"View LMS Requirement Document": "https://assets.surumyasharma.com/Personalized%20Learning%20Recommendation%20System.pdf"}
     }
