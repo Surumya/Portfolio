@@ -169,11 +169,11 @@ const POSTS = [
         id:        'capstone',
         category:  'Capstone',
         date:      '2026-05',
-        icon:      'fa-solid fa fa-trophy',
+        icon:      'fa-solid fa-bar-chart',
         iconColor: 'text-blue-500',
         badge:     'Capstone Project',
-        title:     'Stock Trading App',
-        summary:   'Designed a career-aligned recommendation engine with user stories, functional/non-functional requirements, layered system architecture, and a privacy-first trade-off analysis.',
-        links:     {"View LMS Requirement Document": "https://assets.surumyasharma.com/Personalized%20Learning%20Recommendation%20System.pdf"}
+        title:     'DreamStreet Stock Trading App',
+        summary:   'I created DreamStreet as a pivot from Dream11, with the aim of helping first‑time Indian investors take their first steps into the stock market with confidence. While India has millions of savers, most still rely on FDs, RDs or SIPs, and see equities as “too risky” or “too complex". The problem I uncovered through user research was clear: a trust deficit and confidence gap. 65% of respondents said they lacked time to research, 56% feared losing money, and only 12% reacted positively to the Dream11‑to‑DreamStreet brand shift. SEBI registration stood out as the strongest trust signal, while long KYC approval times were the biggest friction point. My proposed solution combines AI‑powered education (Veda) with SEBI‑certified advisors, a faster and reassuring KYC flow, and low‑ticket ETF/SIP starter paths. This approach directly addresses risk perception, time burden, and trust, making investing accessible for Tier 2/3 city users—the segment driving India’s next wave of retail participation.',
+        links:     {"View Presentation": "https://assets.surumyasharma.com/DreamStreet_SurumyaS_Presentation.pdf", "View Documentation": "https://assets.surumyasharma.com/DreamStreet%20Capstone_SurumyaS_Documentation.pdf", "View User Response": "https://assets.surumyasharma.com/DreamStreet%20User%20Responses%20Website.xlsx"}
     }
 ];
