@@ -56,6 +56,14 @@ const EXPERIENCE = [
         isCurrent:   true
     },
     {
+        period:      'Jul 2021 — Sep 2021',
+        role:        'Mobilization Specialist',
+        company:     'Accenture Operations',
+        description: 'Facilitated mobilisation for a Fortune 500 American conglomerate (industrial & healthcare segments); drove stakeholder alignment between Costa Rica-based client leadership, engineering, and Accenture leadership via structured MOMs and communication protocols',
+        icon:        'fa-rocket',
+        isCurrent:   false
+    },
+    {
         period:      '2016 — 2020',
         role:        'Senior Engineer',
         company:     'Honeywell Automation India Ltd',
