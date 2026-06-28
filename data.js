@@ -11,7 +11,7 @@ const SITE = {
     email:          'sharmasurumya@gmail.com',
     location:       'Pune, India',
     linkedin:       'https://www.linkedin.com/in/surumyas/',
-    resumeUrl:      'https://assets.surumyasharma.com/Resume%20Product%20Management%20Surumya%20Sharma.pdf',
+    resumeUrl:      'https://assets.surumyasharma.com/Resume%20Product%20Management%20Surumya%20Sharma%20CSPO.pdf',
 
     bio: 'Product-focused professional with 6+ years of experience leveraging data-driven insights and cross-functional agility to drive product vision and delivery.',
 
